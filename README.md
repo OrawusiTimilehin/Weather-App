@@ -26,7 +26,7 @@ This Program is written using Object-Oriented Programming and has two modules -
 1. main.py
 2. brain.py
 
-#Main.py -
+# Main.py -
 This module contains the main flow of the program, contains the initialisation of class objects and tkinter object and
 contains the tkinter structure, frames, widgets and the code
 for its layout on the screen.
