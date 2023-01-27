@@ -1,7 +1,7 @@
 # Weather-App
 
 
-#Overview
+# Overview
 This is a simple weather App which uses the TKinter Gui Package and allows for user interaction. It takes in the name of
 a city, carries out analysis on the city's current time, sunset time, sunrise time, time-zone id, weather conditions
 from the Api in order to deliver a beautifully designed user interface that displays the time, date, city name ,
@@ -10,7 +10,7 @@ This program does not have to be run each time when you want to select a new Cit
 back and re-select a City.
 
 
-#Skills -
+# Skills -
 
 APIs
 OOP - Object-Oriented Programming
@@ -38,7 +38,7 @@ displays all the information
 and images and a button inorder the go back to re-select the City.
 
 
-#Brain.py -
+# Brain.py -
 This module contains the Data class , which contains the various methods that request data from the APIs and populates
 the Data class attributes. The class also contains a method that contains the decision system which determines the
 images displayed based on the data and time in the city. This method checks if the condition returned from the Api is in
@@ -47,11 +47,11 @@ If it is in the dictionary it returns the images path associated with that weath
 
 
 
-#APIs
+# APIs
 Powered by WeatherAPI.com - https://www.weatherapi.com/
 Powered by  Ipgeolocation.com - https://ipgeolocation.io/
 
-#Libraries and Packages and Imports
+# Libraries and Packages and Imports
 Tkinter
 PIL
 requests
