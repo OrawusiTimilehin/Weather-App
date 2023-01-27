@@ -36,14 +36,14 @@ def load_frame1():
     bg_img = ImageTk.PhotoImage(bg_img)
     bg_label = tk.Label(f1, image=bg_img, borderwidth=0)
     bg_label.image = bg_img
-    bg_label.grid(row=0, column=0, pady=30)
+    bg_label.grid(row=0, column=0, pady=50)
 
     instruction = tk.Label(f1, text="Enter the name of the City:", fg="#FF577F", bg=BG_1,
-                           font=('Helvetica', 14, "bold"))
-    instruction.grid(row=1, column=0)
+                           font=('Helvetica', 20))
+    instruction.grid(row=1, column=0, pady=20)
 
     city_entry = tk.Entry(f1, highlightbackground=BG_1)
-    city_entry.grid(row=2, column=0)
+    city_entry.grid(row=2, column=0, pady=20)
 
     def get_city_entry():
         global chosen_city
@@ -81,7 +81,7 @@ def load_frame2():
     date_label = tk.Label(f2, text=f'{dt.date}', bg=dt.get_bg_colour(), fg='white', font=('Helvetica', 25))
     date_label.grid(row=0, column=0, pady=10, columnspan=4)
 
-    time_label = tk.Label(f2, text=f'{dt.time}', bg=dt.get_bg_colour(), fg='white', font=('Helvetica', 35, "bold"))
+    time_label = tk.Label(f2, text=f'{dt.time}', bg=dt.get_bg_colour(), fg='white', font=('Helvetica', 35))
     time_label.grid(row=1, column=0, pady=10, columnspan=4)
 
     city_name = tk.Label(f2, text=f'{dt.city_name}', bg=dt.get_bg_colour(), fg="white", font=('Helvetica', 25))
@@ -93,7 +93,7 @@ def load_frame2():
     weather_img_label.image = weather_img
     weather_img_label.grid(row=3, column=0, pady=15, columnspan=4)
 
-    temp_label = tk.Label(f2, text=f"{dt.current_temp}", font=("Helvetica", 75), bg=dt.get_bg_colour(), fg="white")
+    temp_label = tk.Label(f2, text=f"{dt.current_temp}", font=("Arial", 75), bg=dt.get_bg_colour(), fg="white")
     temp_label.grid(row=4, column=0, columnspan=4)
 
     divisor_line_label = tk.Label(frame, text="_________________________________________________________", fg="white",
@@ -143,8 +143,8 @@ def load_frame2():
 
 
 # initialisation of the frames
-f1 = tk.Frame(root, width=500, height=700, bg='#B8E8FC')
-f2 = tk.Frame(root, width=500, height=700, bg=dt.get_bg_colour())
+f1 = tk.Frame(root, width=500, height=800, bg='#B8E8FC')
+f2 = tk.Frame(root, width=500, height=800, bg=dt.get_bg_colour())
 
 # place frame widgets in window
 for frame in (f1, f2):
