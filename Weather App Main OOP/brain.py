@@ -1,9 +1,14 @@
 import requests
+import os
 from datetime import datetime
+from dotenv import load_dotenv
 
-API_KEY = 'e5ac26052ee645b1a5e25946230601'
 
-DATE_API_KEY = 'd55d42ab6fdc4e55a0bfba27274e46a5'
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
+
+DATE_API_KEY = os.getenv("DATE_API_KEY")
 
 
 

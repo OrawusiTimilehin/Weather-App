@@ -6,7 +6,7 @@ a city, carries out analysis on the city's current time, sunset time, sunrise ti
 from the Api in order to deliver a beautifully designed user interface that displays the time, date, city name ,
 Image depicting the current weather and also the images for the weather forecast for various hours of the day.
 This program does not have to be run each time when you want to select a new City as it contains a user interface to go
-back and re-select a  City.
+back and re-select a City.
 
 
 Skills -
