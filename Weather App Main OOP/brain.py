@@ -60,7 +60,7 @@ class Data:
         }
         data = requests.get('http://api.weatherapi.com/v1/forecast.json', params=parameters).json()
         self.city_name = f"{data['location']['name']}"
-        self.avg_temp = f'{data["forecast"]["forecastday"][0]["day"]["avgtemp_c"]}°'
+        self.current_temp = f'{data["current"]["temp_c"]}°'
         self.six_am = f'{data["forecast"]["forecastday"][0]["hour"][6]["condition"]["text"]}°'
         self.nine_am = f'{data["forecast"]["forecastday"][0]["hour"][9]["condition"]["text"]}°'
         self.twelve_pm = f'{data["forecast"]["forecastday"][0]["hour"][12]["condition"]["text"]}°'

@@ -11,7 +11,7 @@ BG_1 = '#B8E8FC'
 
 # set the tile and window size
 root.title(" Weather App ")
-root.minsize(width=500, height=700)
+root.minsize(width=500, height=800)
 
 # Initialisation of the chosen city variable which would be modified in the load frame1 method
 chosen_city = ''
@@ -93,50 +93,53 @@ def load_frame2():
     weather_img_label.image = weather_img
     weather_img_label.grid(row=3, column=0, pady=15, columnspan=4)
 
+    temp_label = tk.Label(f2, text=f"{dt.current_temp}", font=("Helvetica", 75), bg=dt.get_bg_colour(), fg="white")
+    temp_label.grid(row=4, column=0, columnspan=4)
+
     divisor_line_label = tk.Label(frame, text="_________________________________________________________", fg="white",
                                   bg=dt.get_bg_colour())
-    divisor_line_label.grid(row=4, column=0, columnspan=5)
+    divisor_line_label.grid(row=5, column=0, columnspan=5)
 
     six_am_label = tk.Label(frame, text="6am", fg="white", bg=dt.get_bg_colour())
-    six_am_label.grid(row=5, column=0)
+    six_am_label.grid(row=6, column=0)
     nine_am_label = tk.Label(frame, text="9am", fg="white", bg=dt.get_bg_colour())
-    nine_am_label.grid(row=5, column=1)
+    nine_am_label.grid(row=6, column=1)
     twelve_pm_label = tk.Label(frame, text="12pm", fg="white", bg=dt.get_bg_colour())
-    twelve_pm_label.grid(row=5, column=2)
+    twelve_pm_label.grid(row=6, column=2)
     three_pm_label = tk.Label(frame, text="3pm", fg="white", bg=dt.get_bg_colour())
-    three_pm_label.grid(row=5, column=3)
+    three_pm_label.grid(row=6, column=3)
 
     six_am_img = dt.weather_symbol(current_weather=f'{dt.six_am}', size='small')
     six_am_weather_img = Image.open(six_am_img)
     six_am_weather_img = ImageTk.PhotoImage(six_am_weather_img)
     six_am = tk.Label(f2, image=six_am_weather_img, bg=dt.get_bg_colour())
     six_am.img = six_am_weather_img
-    six_am.grid(row=6, column=0)
+    six_am.grid(row=7, column=0)
 
     nine_am_img = dt.weather_symbol(current_weather=f'{dt.nine_am}', size='small')
     nine_am_weather_img = Image.open(nine_am_img)
     nine_am_weather_img = ImageTk.PhotoImage(nine_am_weather_img)
     nine_am = tk.Label(f2, image=nine_am_weather_img, bg=dt.get_bg_colour())
     nine_am.img = nine_am_weather_img
-    nine_am.grid(row=6, column=1)
+    nine_am.grid(row=7, column=1)
 
     twelve_pm_img = dt.weather_symbol(current_weather=f'{dt.twelve_pm}', size='small')
     twelve_pm_weather_img = Image.open(twelve_pm_img)
     twelve_pm_weather_img = ImageTk.PhotoImage(twelve_pm_weather_img)
     twelve_pm = tk.Label(f2, image=twelve_pm_weather_img, bg=dt.get_bg_colour())
     twelve_pm.img = twelve_pm_weather_img
-    twelve_pm.grid(row=6, column=2)
+    twelve_pm.grid(row=7, column=2)
 
     three_pm_img = dt.weather_symbol(current_weather=f'{dt.three_pm}', size='small')
     three_pm_weather_img = Image.open(three_pm_img)
     three_pm_weather_img = ImageTk.PhotoImage(three_pm_weather_img)
     three_pm = tk.Label(f2, image=three_pm_weather_img, bg=dt.get_bg_colour())
     three_pm.img = three_pm_weather_img
-    three_pm.grid(row=6, column=3)
+    three_pm.grid(row=7, column=3)
 
     back_button = tk.Button(f2, text='Back', highlightcolor='black', fg="black", command=load_frame1,
                             highlightbackground=dt.get_bg_colour())
-    back_button.grid(row=7, column=0, padx=215, columnspan=4)
+    back_button.grid(row=8, column=0, padx=215, columnspan=4)
 
 
 # initialisation of the frames
